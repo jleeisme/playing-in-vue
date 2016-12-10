@@ -10,6 +10,7 @@
       .Plan__price {
         float: right;
       }
+
     </style>
   </head>
   
@@ -18,8 +19,9 @@
     {{ $data }}
   </pre>
 
-
+    <!-- plans being in the vue instance -->
     <div v-for="plan in plans">
+    <!-- :binds, @is a change, a modifier -->
       <plan :plan="plan" @activate="setActive" :active="active"></plan>
     </div>
   </div>
@@ -29,6 +31,7 @@
     <div>
       <span class="Plan__name">{{ plan.name }}</span>
       <span class="Plan__price">{{ plan.price }}/month</span>
+      <!-- if not active - plans are activated by clicks, chosen by either upgrade or downgrade - otherwise, it's selected -->
       <button v-if="!isActive" @click="setPlan">{{ isUpgrade ? 'Upgrade' : 'Downgrade' }}</button>
       <span v-else>Selected</span>
     </div>
@@ -39,7 +42,7 @@
 
   <script>
 
-    Vue.component('plan', {
+    Vue.component('plan', {//doesn't need to be global
       template: '#plan-template',
       props: ['plan', 'active'],
       computed: {
@@ -59,7 +62,7 @@
 
     new Vue({
       el: '#app',
-      data: {
+      data: {//can be used in a <pre> in a <div> as $data to visualize what happens
         active: {},
         plans: [
           { name: 'Enterprise', price: 100 },
