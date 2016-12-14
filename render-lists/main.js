@@ -5,7 +5,7 @@ Vue.component('tasks', {
   // wa wa wa
   data: function() {
     return { 
-      list: this.list1
+      wtf: this.list
     }
   },
   computed: {

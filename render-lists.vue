@@ -19,7 +19,7 @@
     <h1>
       Tasks
       <!-- if there's something in remaining to be computed, it shows, otherwise it's not -->
-      <span v-show="remaining">({{ remaining }})</span> 
+      <span v-show="remaining">{{ remaining }}</span> 
     </h1>
     <!-- vue1 could use v-show with a following v-else -->
     <ul v-if="list.length">
