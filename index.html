@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +26,39 @@
     }
   })
 
+=======
+<html>
+
+<body>
+
+<div id="app">
+ 
+    <my-counter info="likes"></my-counter>
+    <my-counter info="dislikes"></my-counter>
+
+</div>
+
+<template id="counter-template">
+  <div>
+    <h1>{{ info }}</h1>
+    <button @click="count += 1">Increment {{ count }}</button>
+  </div>
+</template>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+  Vue.component('my-counter', {
+    template: '#counter-template',
+    props: ['info'],
+    data: function() {
+      return { count: 0 }
+    }
+  });
+  new Vue ({
+    el: '#app'
+
+  });
+>>>>>>> dea81c7d8c549d04c3ae1d60c880ca223fb0998b
 </script>
 </body>
 </html>
