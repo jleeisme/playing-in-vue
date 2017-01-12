@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.0/css/bulma.css">
+</head>
+
+
+
+<body>
+
+  <div id="root" class="container">
+
+    <my-modal v-if="modalVisible" @close="modalVisible = false">
+      <p>
+        put me in coach
+      </p>
+    </my-modal>
+
+    <button @click="modalVisible = true">Show modal</button>
+  </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="main7.js"></script>
+
+
+</body>
+</html>
