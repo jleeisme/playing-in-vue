@@ -4,10 +4,21 @@
   <title></title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.0/css/bulma.css">
+  
+  <style>
+    .modal-content {
+      color: pink;
+    }
+
+    .box {
+      background-color: brown;
+    }
+  </style>
+  
 </head>
 
-
 <body>
+
 <div id="root" class="container">
   <tabs>
 
@@ -24,8 +35,16 @@
     </tab>
 
   </tabs>
+</div>
 
+<div id="other">
+  <something v-if="modalVisible" @close="modalVisible = false">
+    
+    <h2>blahblahblah</h2>
 
+  </something>
+  
+  <button @click="modalVisible = true">Open sesame</button>
 </div>
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
