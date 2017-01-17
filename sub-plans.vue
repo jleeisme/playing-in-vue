@@ -43,7 +43,9 @@
   <script>
 
     Vue.component('plan', {//doesn't need to be global
+
       template: '#plan-template',
+
       props: ['plan', 'active'],//must be explicit about the props...being the two custom props that were made: plan and active
       computed: {
         isUpgrade: function() {
