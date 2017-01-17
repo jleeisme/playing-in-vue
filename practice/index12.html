@@ -13,9 +13,11 @@
 
       <div>
         <h1>this is progress {{ completionRate }}%</h1>  
-        <p><button @click="completionRate += 10">update</button></p>
+        <p><button @click="completionRate += 10">upgrade</button></p>
+        <!-- the `-` really sets off the colours in the ` -= 10` -->
+        <p><button @click="completionRate -= 10">downgrade</button></p>
       </div>
-      
+
     </progress-view>
 
   </div>
