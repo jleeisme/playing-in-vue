@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.css">
+</head>
+
+<style>
+  
+  .container {
+    width: 100%;
+    left: 50%;
+/*    padding-top: 50%;*/
+  }
+
+</style>
+
+<body>
+
+  <div id="root" class="container">
+    
+    <progress-view inline-template>
+
+      <div>
+        <h1>this is progress {{ completionRate }}%</h1>  
+        <p><button @click="completionRate += 10">upgrade</button></p>
+        <!-- the `-` really sets off the colours in the ` -= 10` -->
+        <p><button @click="completionRate -= 10">downgrade</button></p>
+      </div>
+
+    </progress-view>
+
+  </div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="main12.js"></script>
+
+</body>
+</html>
